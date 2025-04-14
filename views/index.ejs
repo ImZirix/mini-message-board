@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+  </head>
+  <body>
+    <% messages.forEach((message, index) => { %>
+    <ul>
+      <%= title %>
+      <li>User: <%= message.user %></li>
+      <li>Message: <%= message.text %></li>
+      <li>Date: <%= message.added %></li>
+      <a href="/messages/<%= index %>">open</a>
+    </ul>
+    <% }); %>
+  </body>
+</html>
