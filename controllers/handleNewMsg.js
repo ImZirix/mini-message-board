@@ -1,7 +1,7 @@
 const messages = require("../data/msgs");
-exports.createMsg = (req, res) => {
-  const { msg, name } = req.body;
+const addNew = require("../db/queries");
+exports.createMsg = async (req, res) => {
+  await addNew.insertMessage(req.body.username, req.body.text);
   console.log(req.body);
-  messages.push({ text: msg, user: name, added: new Date() });
   res.redirect("/");
 };

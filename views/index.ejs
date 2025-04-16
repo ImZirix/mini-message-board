@@ -6,12 +6,12 @@
     <title>Homepage</title>
   </head>
   <body>
-    <% messages.forEach((message, index) => { %>
+    <% usernames.forEach((user, index) => { %>
     <ul>
       <%= title %>
-      <li>User: <%= message.user %></li>
-      <li>Message: <%= message.text %></li>
-      <li>Date: <%= message.added %></li>
+      <li>User: <%= user.username %></li>
+      <li>Message: <%= user.text %></li>
+      <li>Date: <%= user.created_at %></li>
       <a href="/messages/<%= index %>">open</a>
     </ul>
     <% }); %>
